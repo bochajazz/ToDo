@@ -1,0 +1,139 @@
+/* Configuramos una fuente moderna */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #83a4d4, #b6fbff); /* Fondo en degradado */
+}
+
+/* Centramos la aplicación en un contenedor */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Ancho máximo */
+    text-align: center;
+}
+
+/* Estilos para el campo de entrada */
+#todo {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #83a4d4;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+    outline: none;
+}
+
+/* Placeholder estilizado */
+#todo::placeholder {
+    color: #999;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Efecto al enfocar en el campo de entrada */
+#todo:focus {
+    border-color: #b6fbff;
+}
+
+/* Estilos para el botón */
+.submit-btn {
+    width: 85%;
+    padding: 10px;
+    background-color: #83a4d4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #b6fbff;
+    transform: scale(1.05); /* Efecto hover con escala */
+}
+
+/* Estilos para la lista de tareas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Estilos para los elementos de la lista */
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+}
+
+/* Estilos para el texto de la tarea */
+li span {
+    flex-grow: 1; /* Para que el texto ocupe todo el espacio disponible */
+    cursor: pointer;
+}
+
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Estilos para el botón de eliminar tarea */
+button {
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4d4d;
+}
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #todo {
+        width: 95%; /* Cambiamos el width a 100% para pantallas pequeñas */
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #todo {
+        font-size: 14px; /* Reducimos el tamaño del texto */
+        padding: 8px; /* Ajustamos el padding para que no sobresalga */
+    }
+
+    #todo::placeholder {
+        font-size: 14px; /* Ajustamos el tamaño del placeholder */
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
